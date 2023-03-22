@@ -1,0 +1,36 @@
+apply plugin: 'checkstyle'
+
+buildscript {
+    repositories {
+        google()
+        jcenter()
+        maven { url 'https://jitpack.io' }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.1.0'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+checkstyle {
+    toolVersion "8.7"
+    configFile = new File(rootDir, "config/checkstyle.xml")
+}
+task checkstyleMain (type: Checkstyle) {
+    source 'app/src/main'
+    include '**/*.java'
+    exclude '**/gen/**'
+    exclude '**/R.java'
+    exclude '**/BuildConfig.java'
+    classpath = files()
+}

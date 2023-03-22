@@ -1,0 +1,1 @@
+typeSearchIndex = [{"p":"<Unnamed>","l":"Colosseum"},{"p":"<Unnamed>","l":"Dice"},{"p":"<Unnamed>","l":"ElectricPokemon"},{"p":"<Unnamed>","l":"FirePokemon"},{"p":"<Unnamed>","l":"Pokemon"},{"p":"<Unnamed>","l":"Pokemon.PokemonType"},{"p":"<Unnamed>","l":"WaterPokemon"}]
